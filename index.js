@@ -12,7 +12,7 @@ conectarDB();
 app.use(express.json({ extended: true }));
 app.use(cors());
 
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 const HOST = process.env.HOST || "localhost";
 
 //Importar rutas
@@ -28,6 +28,6 @@ app.use("/api/tareas/", tareaRoutes);
 
 //arrancar APP
 
-app.listen(PORT, () =>
+app.listen(port, "0.0.0.0", () =>
   console.log(`Servidor funcionando en ${HOST} el puerto ${PORT}`)
 );
